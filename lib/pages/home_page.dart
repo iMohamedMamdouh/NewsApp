@@ -1,4 +1,4 @@
-import 'package:demo_newsapp/pages/row_card.dart';
+import 'package:demo_newsapp/widgets/row_card.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
