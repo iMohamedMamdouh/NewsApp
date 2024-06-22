@@ -1,4 +1,4 @@
-import 'package:demo_newsapp/widgets/row_card.dart';
+import 'package:demo_newsapp/widgets/categoryies_listview.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: MyCard(),
+      body: categoryiesListView(),
     );
   }
 }
