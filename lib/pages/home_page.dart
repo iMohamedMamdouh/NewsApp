@@ -1,4 +1,5 @@
 import 'package:demo_newsapp/widgets/categoryies_listview.dart';
+import 'package:demo_newsapp/widgets/news_listview.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -21,7 +22,12 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: categoryiesListView(),
+      body: Column(
+        children: [
+          categoryiesListView(),
+          NewsListView(),
+        ],
+      ),
     );
   }
 }
