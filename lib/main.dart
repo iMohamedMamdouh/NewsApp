@@ -1,9 +1,12 @@
-import 'package:flutter/material.dart';
 import 'package:demo_newsapp/pages/home_page.dart';
+import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(const NewsApp());
 }
+
+final dio = Dio();
 
 class NewsApp extends StatelessWidget {
   const NewsApp({super.key});

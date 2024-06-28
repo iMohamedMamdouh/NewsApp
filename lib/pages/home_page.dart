@@ -22,11 +22,17 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        children: [
-          categoryiesListView(),
-          NewsListView(),
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: CustomScrollView(
+          physics: BouncingScrollPhysics(),
+          slivers: [
+            SliverToBoxAdapter(
+              child: categoryiesListView(),
+            ),
+            NewsListView(),
+          ],
+        ),
       ),
     );
   }

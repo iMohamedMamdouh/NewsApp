@@ -40,18 +40,16 @@ class categoryiesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 130,
-      child: Expanded(
-        child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: categories.length,
-          itemBuilder: (context, index) {
-            return MyCard(
-              category: categories[index],
-            );
-          },
-        ),
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categories.length,
+        itemBuilder: (context, index) {
+          return MyCard(
+            category: categories[index],
+          );
+        },
       ),
     );
   }
