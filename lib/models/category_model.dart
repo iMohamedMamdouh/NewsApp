@@ -1,3 +1,4 @@
+// ignore: camel_case_types
 class Category_Model {
   final String img;
   final String title;

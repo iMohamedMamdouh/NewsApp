@@ -1,5 +1,5 @@
 import 'package:demo_newsapp/widgets/categoryies_listview.dart';
-import 'package:demo_newsapp/widgets/news_listview.dart';
+import 'package:demo_newsapp/widgets/news_listviewBuilder.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         backgroundColor: Colors.grey[200],
-        title: Row(
+        title: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text('News'),
@@ -22,15 +22,17 @@ class HomePage extends StatelessWidget {
           ],
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
+      body: const Padding(
+        padding: EdgeInsets.all(8.0),
         child: CustomScrollView(
           physics: BouncingScrollPhysics(),
           slivers: [
             SliverToBoxAdapter(
               child: categoryiesListView(),
             ),
-            NewsListView(),
+            NewsListViewBuilder(
+              category: 'general',
+            ),
           ],
         ),
       ),
